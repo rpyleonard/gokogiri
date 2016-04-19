@@ -41,7 +41,7 @@ int getXPathObjectType(xmlXPathObject* o) {
 import "C"
 
 import "unsafe"
-import . "github.com/moovweb/gokogiri/util"
+import . "github.com/jbowtie/gokogiri/util"
 import "runtime"
 import "errors"
 
@@ -69,7 +69,7 @@ type XPathFunction func(context VariableScope, args []interface{}) interface{}
 
 // Types that provide the VariableScope interface know how to resolve
 // XPath variable names into values.
-
+//
 //This interface exist primarily for the benefit of XSLT processors.
 type VariableScope interface {
 	ResolveVariable(string, string) interface{}
@@ -224,7 +224,7 @@ func (xpath *XPath) SetContextPosition(position, size int) {
 // GetContextPosition retrieves the internal values used to
 // determine the values of position() and last() for the
 // current context node.
-
+//
 // This allows values to saved and restored during processing
 // of a document.
 func (xpath *XPath) GetContextPosition() (position, size int) {

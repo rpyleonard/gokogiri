@@ -1,6 +1,7 @@
 Gokogiri
 ========
 [![Build Status](https://travis-ci.org/jbowtie/gokogiri.svg?branch=master)](https://travis-ci.org/jbowtie/gokogiri)
+[![codecov.io](http://codecov.io/github/jbowtie/gokogiri/coverage.svg?branch=master)](http://codecov.io/github/jbowtie/gokogiri?branch=master)
 
 LibXML bindings for the Go programming language.
 ------------------------------------------------
@@ -17,7 +18,7 @@ This is a major rewrite from v0 in the following places:
 
 To install:
 
-- sudo apt-get install libxml2-dev
+- sudo apt-get install libxml2-dev libonig-dev
 - go get github.com/jbowtie/gokogiri
 
 To run test:

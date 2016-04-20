@@ -11,4 +11,4 @@ addons:
   apt:
     packages:
     - libxml2-dev
-    - libonig2
+    - libonig-dev

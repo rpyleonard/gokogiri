@@ -1,5 +1,7 @@
 Gokogiri
 ========
+[![Build Status](https://travis-ci.org/jbowtie/gokogiri.svg?branch=master)](https://travis-ci.org/jbowtie/gokogiri)
+
 LibXML bindings for the Go programming language.
 ------------------------------------------------
 By Zhigang Chen and Hampton Catlin

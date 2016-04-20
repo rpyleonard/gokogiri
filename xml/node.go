@@ -90,6 +90,7 @@ type Node interface {
 	LastChild() Node
 	CountChildren() int
 	Attributes() map[string]*AttributeNode
+	AttributeList() []*AttributeNode
 
 	Coerce(interface{}) ([]Node, error)
 
@@ -469,6 +470,21 @@ func (xmlNode *XmlNode) Replace(data interface{}) (err error) {
 	return
 }
 
+// Return a document-ordered list of attribute nodes.
+func (xmlNode *XmlNode) AttributeList() (attributes []*AttributeNode) {
+	for prop := xmlNode.Ptr.properties; prop != nil; prop = prop.next {
+		if prop.name != nil {
+			attrPtr := unsafe.Pointer(prop)
+			attributeNode := NewNode(attrPtr, xmlNode.Document)
+			if attr, ok := attributeNode.(*AttributeNode); ok {
+				attributes = append(attributes, attr)
+			}
+		}
+	}
+	return
+}
+
+// Return the attribute nodes indexed by name.
 func (xmlNode *XmlNode) Attributes() (attributes map[string]*AttributeNode) {
 	attributes = make(map[string]*AttributeNode)
 	for prop := xmlNode.Ptr.properties; prop != nil; prop = prop.next {

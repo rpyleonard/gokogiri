@@ -1,9 +1,11 @@
 language: go
 go:
   - 1.6
+  - tip
 
 script:
-  - go test -coverprofile=coverage.txt -covermode=atomic .
+  - go test -coverprofile=html_coverage.txt -covermode=atomic ./html
+  - go test -coverprofile=xml_coverage.txt -covermode=atomic ./xml
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

@@ -1,7 +1,8 @@
 Gokogiri
 ========
 [![Build Status](https://travis-ci.org/jbowtie/gokogiri.svg?branch=master)](https://travis-ci.org/jbowtie/gokogiri)
-[![codecov.io](http://codecov.io/github/jbowtie/gokogiri/coverage.svg?branch=master)](http://codecov.io/github/jbowtie/gokogiri?branch=master)
+[![codecov](https://codecov.io/gh/jbowtie/gokogiri/branch/master/graph/badge.svg)](https://codecov.io/gh/jbowtie/gokogiri)
+
 
 LibXML bindings for the Go programming language.
 ------------------------------------------------

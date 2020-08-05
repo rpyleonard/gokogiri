@@ -8,8 +8,8 @@ and a simple DOM-like inteface allows for building up documents from scratch.
 package gokogiri
 
 import (
-	"github.com/jbowtie/gokogiri/html"
-	"github.com/jbowtie/gokogiri/xml"
+	"github.com/rpyleonard/gokogiri/html"
+	"github.com/rpyleonard/gokogiri/xml"
 )
 
 /*
